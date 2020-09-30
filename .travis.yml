@@ -17,14 +17,23 @@ matrix:
 
     - os: linux
       compiler: clang
+      arch:
+        - amd64
+        - ppc64le
       env: CMAKE_CONFIGURATION=release BUILD_DIR=build
 
     - os: linux
       compiler: clang
+      arch:
+        - amd64
+        - ppc64le
       env: CMAKE_CONFIGURATION=debug BUILD_DIR=build-debug
 
     - os: linux
       compiler: gcc
+      arch:
+        - amd64
+        - ppc64le
       env:
         - CMAKE_CONFIGURATION=release BUILD_DIR=build
         - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
@@ -38,6 +47,9 @@ matrix:
 
     - os: linux
       compiler: gcc
+      arch:
+        - amd64
+        - ppc64le
       env:
         - CMAKE_CONFIGURATION=debug BUILD_DIR=build-debug
         - MATRIX_EVAL="CC=gcc-5 && CXX=g++-5"
